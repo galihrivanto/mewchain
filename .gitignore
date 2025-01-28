@@ -1,0 +1,5 @@
+dist/
+node_modules/
+
+# created files
+db
