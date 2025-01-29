@@ -2,4 +2,7 @@ dist/
 node_modules/
 
 # created files
+data/
 db
+*.wallet
+!genesis.wallet

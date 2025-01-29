@@ -1,5 +1,5 @@
-import { Transaction } from './Transaction';
-import { Blockchain } from './Blockchain';
+import { Transaction } from './transaction';
+import { Blockchain } from './blockchain';
 
 export class SmartContract {
   address: string;

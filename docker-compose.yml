@@ -1,23 +1,21 @@
-version: '3'
 services:
   node1:
     build: .
     container_name: node1
-    ports:
-      - "3001:3000"
-    environment:
-      - NODE_ID=1
+    volumes:
+      - ./data/node1:/app/data
+    command: ["node", "dist/main.js", "node", "run", "--data-dir", "/app/data"]
+
   node2:
     build: .
     container_name: node2
-    ports:
-      - "3002:3000"
-    environment:
-      - NODE_ID=2
+    volumes:
+      - ./data/node2:/app/data
+    command: ["node", "dist/main.js", "node", "run", "--data-dir", "/app/data"]
+
   node3:
     build: .
     container_name: node3
-    ports:
-      - "3003:3000"
-    environment:
-      - NODE_ID=3
+    volumes:
+      - ./data/node3:/app/data
+    command: ["node", "dist/main.js", "node", "run", "--data-dir", "/app/data"]

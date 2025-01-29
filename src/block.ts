@@ -1,5 +1,8 @@
-import { Transaction } from './Transaction';
+import { Transaction } from './transaction';
 import crypto from 'crypto';
+import { getLogger } from './logging';
+
+const logger = getLogger(__filename);
 
 export class Block {
   index: number;
@@ -42,6 +45,6 @@ export class Block {
       this.nonce++;
       this.hash = this.calculateHash();
     }
-    console.log(`Block mined: ${this.hash}`);
+    logger.info(`Block mined: ${this.hash}`);
   }
 }

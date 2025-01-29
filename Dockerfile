@@ -9,4 +9,4 @@ COPY . .
 
 RUN npm run build
 
-CMD ["node", "dist/examples/runNode.js"]
+CMD ["node", "dist/main.js"]
